@@ -21,7 +21,7 @@ console.log(queryUrl);
 
 axios.get(queryUrl).then(
   function(response) {
-    console.log("Artist: " + response.data.datetime, "\nVenue: " + response.data.venuename, "\nDate: " + response.data.venuename );
+    console.log("Venue: " + response.data[0].venue.name, "\nVenue City: " + response.data[0].venue.city, "\nDate: " + response.data[0].datetime );
   }
 );
 //console.log("Date - " + moment(element.datetime).format("MM/DD/YYYY"));
